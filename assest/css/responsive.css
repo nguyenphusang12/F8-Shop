@@ -1,0 +1,143 @@
+/* mobie and table */
+
+@media (max-width:1023px) {
+    .hide-on-mobie-table {
+        display: none;
+    }
+     :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+    }
+    .header__cart-list::before {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .app__content {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .header-sort-bar {
+        display: flex;
+    }
+}
+
+
+/* table */
+
+@media (min-width:740px) and (max-width:1023px) {
+    .hide-on-table {
+        display: none;
+    }
+    .header__cart-notice {
+        top: -10px;
+        right: 12px;
+    }
+    .header__cart {
+        width: 70px;
+    }
+}
+
+
+/* mobie */
+
+@media (max-width:739px) {
+     :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobie {
+        display: none;
+    }
+    .header__logo {
+        width: unset;
+    }
+    .header__cart {
+        width: unset;
+    }
+    .header-with-search {
+        justify-content: space-between;
+    }
+    .header__cart-notice {
+        top: -8px;
+        right: 6px;
+        font-size: 1.4rem;
+    }
+    .header__cart-icon {
+        font-size: 2.4rem;
+    }
+    .header-search-mobie {
+        display: block;
+    }
+    .header__seach {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        z-index: 2;
+        padding: 0 16px;
+        height: 46px;
+        display: none;
+        animation: headerSeachMobieShow linear 0.3s;
+    }
+    @keyframes headerSeachMobieShow {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+    .header__seach-history {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .pagination__item {
+        margin: 0;
+    }
+    .pagination__item-link {
+        height: 26px;
+        min-width: 36px;
+        font-size: 1.6rem;
+    }
+    .home-products {
+        margin: 0 5px;
+    }
+    .category-mobie {
+        display: block;
+    }
+    .header__logo-img {
+        width: 110px;
+    }
+    .footer__content {
+        padding: 0 16px;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer__download,
+    .footer-item__link {
+        justify-content: center;
+    }
+    .footer__download-app {
+        flex: unset;
+    }
+    .footer__download-app-link {
+        display: block;
+        padding: 10px;
+    }
+}
